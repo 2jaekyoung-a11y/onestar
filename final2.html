@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Final Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: black;
+  }
+
+  /* 첫 화면 */
+  .title-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(40px);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+    background-color: black;
+  }
+  .title-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .title-section h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  /* 편지 섹션 */
+  .letter-section {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #111;
+    opacity: 0;
+    transform: translateY(40px); /* 기본: 조금 아래 위치 */
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+    text-align: center;
+  }
+  .letter-section.visible {
+    opacity: 1;
+    transform: translateY(0); /* 원래 자리로 */
+  }
+  .letter-section h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+  .letter-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 12px 0;
+  }
+
+  /* 마지막 섹션 */
+  .final-section {
+    height: 60vh; /* 화면 전체보다 조금 작게 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+    background-color: black;
+  }
+  .final-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .final-section h3 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+
+<!-- 첫 화면 -->
+<section class="title-section">
+  <h1>O.I TF가 전하는 마음</h1>
+</section>
+
+<!-- 두 번째 화면: 편지 내용 -->
+<section class="letter-section">
+  <h2>💌O.I TF가 한별 팀장님께💌</h2>
+  <p><br></p>
+  <p> 👩🏻팀장님~! 저는 팀장님 같은 분과 같은 팀을 할 수 있게 된게 정말 인생의 천운이라고 생각합니다. <br>
+  살면서 인복이 정말 좋다고 느끼는데 팀장님과 팀원분들을 만나서 행복한 직장 생활을 하고 있어요 ㅎㅎ <br>
+  회사 생활이 항상 행복할 수는 없지만 팀장님과 함께라면 그 어떤 업무도 잘 해쳐나갈 수 있을 것 같습니다! <br>
+  저희팀! 영원히 함께해요!</p>
+  <p><br></p>
+  <p>👩🏻 팀장님, 올해 처음으로 뵙게 되었지만 오래된 인연처럼 정겹고, 편안하고, 유쾌하게 지낼 수 있게 도와주셔서 회사에 잘 적응할 수 있었던 것 같습니다. <br>
+  감사합니다:) </p>
+  <p><br></p>
+  <p>👦🏻팀장님과 다시 한 팀으로 일하게 되어 좋았습니다. 팀장님과 새로운 팀원들 덕분에 팀 분위기가 크게 달라진 것을 느끼고 있습니다. <br>
+  부임 이후로 쉼없이 달려오신 만큼 연말에는 꼭 편히 쉬시고 재충전하는 시간 되시길 바랍니다.  <br>
+  내년에도 좋은 성과 만들어가도록 저도 최선을 다하겠습니다.</p>
+  <p><br></p>
+  <p>👩🏻팀장님, 2025 한 해 평안하셨나요?  <br>
+  저는 올해 SK바이오텍의 일원이 되어, 팀장님을 모시고 함께 일할 수 있음에 그저 감사한 마음 뿐입니다. <br>
+  회식 자리에서 "팀장님의 오른팔이 되고 싶다"라고 드린 말씀은 농담 속에 진담을 담은 거예요. <br>
+  앞으로 그리시는 팀의 모습을 함께 만들어가겠습니다!</p>
+  <p><br></p>
+  <p>👩🏻올해 팀장님의 뛰어난 패션 센스와 능력을 가까이에서 보고, 배울 수 있어 영광이었습니다. <br>
+  보고서 작성부터 직장생활 등 든든한 가르침과 이끌어주심에 대단히 감사드립니다. <br>
+  2025년에도 팀장님의 리더십 하에서 배우며 성장하고 싶습니다. <br>
+  감사합니다.</p>
+  <p><br></p>
+  <p>👦🏻팀장님이 부임하신 뒤로 팀에 활력이 생겨, <br>
+  모두에게 큰 힘이 되고 있습니다. <br>
+  때로는 팀원들의 든든한 방패막이 되어 주시며, <br>
+  업무에 집중할 수 있게 이끌어 주셔서 감사드립니다. <br>
+  또한, 명확한 지시와 배경 설명 덕분에 업무를 더 잘 이해하고  <br>
+  수행할 수 있게 되었고, 늘 팀원을 먼저 생각해주시는 모습에도 감사드립니다. <br>
+  항상 감사합니다!
+</section>
+
+<!-- 마지막 화면 -->
+<section class="final-section">
+  <h3>2026년도 잘 부탁드립니다!<br>
+  -O.I TF 일동-</h3>
+</section>
+
+<script>
+  const letterSection = document.querySelector('.letter-section');
+  const finalSection = document.querySelector('.final-section');
+
+  window.addEventListener('scroll', () => {
+    const rectLetter = letterSection.getBoundingClientRect();
+
+    // 편지가 화면 진입 → 페이드 인 + translateY 0
+    if (rectLetter.top < window.innerHeight - 50 && rectLetter.bottom > 50) {
+      letterSection.classList.add('visible');
+    }
+
+    // 편지가 화면절반 아래로 내려가면 → 마지막 보기로 전환
+    if (rectLetter.bottom <= window.innerHeight / 2) {
+      finalSection.classList.add('visible');
+      letterSection.classList.remove('visible');
+    }
+  });
+
+  // 로드 시 상태 갱신
+  window.dispatchEvent(new Event('scroll'));
+</script>
+
+</body>
+</html>
