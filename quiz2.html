@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>퀴즈 1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    background-color: #fdfdfd; /* 부드러운 흰색 배경 */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center; /* 중앙 정렬 */
+    flex-direction: column;
+    padding: 20px;
+  }
+  h1 {font-size: 1.5rem;}
+  h2 {font-size: 1.2rem;} 
+  p {
+    font-size: 1.0rem; /* 글씨 크기 - 숫자 조정 가능 (ex: 2rem, 1.2rem) */
+    margin: 12px 0;     /* 각 문장 사이 여백 */
+    line-height: 1.6;   /* 줄 간격 넉넉하게 */
+  }
+</style>
+</head>
+<body>
+<div class="question-container">
+  <h1>세 번째 질문 :</h1>
+  <h2>다음은 O.I 구성원의 일기입니다. </h2>
+  <h3>000이 누군지 작성해주세요.</h3>
+  <p></p>
+  <p> [xx월 xx일] </p>
+  <p>000은 여자였다. 남자였다. 소년이였다. 어린아이였다. 동물이었다. 아브락사스였다.</p>
+  <p>얼룩 한점으로 흐릿해졌다가 다시 크고 뚜렷해졌다.</p>
+  <p>끝에 가서 나는 마음속에 들리는 뚜렷한 부름을 따르며 눈을 감았고,</p>
+  <p>이제 000을 내 마음만에서 보았다.</p>
+  <p>더욱 강하게, 더욱 힘있게, 나는 그분 앞에서 무릎을 꿇으려했다. </p>
+  <p>그러나 000이 어찌나 내 안으로 들어가 버렸는지 000을 나 자신과 갈라놓을 수 없었다. </p>
+  <p>마치 000이 온통 나 자신이 되어버린 듯이....</p>
+  <input type="text" id="answer">
+  <button onclick="checkAnswer()">제출</button>
+</div>
+<script>
+function checkAnswer(){
+  if(document.getElementById('answer').value.trim() === "박용우"){
+    window.location.href="Quiz3.html";
+  } else {
+    alert("오답입니다. 다시 시도하세요.");
+  }
+}
+</script>
+</body>
+</html>
