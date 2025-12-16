@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>첫 페이지</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<style>
+  body {
+    margin:0; 
+    background-color:white; 
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+    height:100vh;
+  }
+  img {
+    opacity:0; 
+    transition:opacity 2s ease-in;
+    max-width:90%;
+    height:auto;
+  }
+</style>
+</head>
+<body>
+<img id="introImage" src="SK-biotech_RGB_EN.png" alt="Intro Image">
+<script>
+  const img = document.getElementById('introImage');
+  setTimeout(()=>{
+    img.style.opacity=1;
+  }, 100); // 페이드인 시작
+
+  setTimeout(()=>{
+    img.style.opacity=0;
+  }, 2100); // 1초 후 사라짐
+
+  setTimeout(()=>{
+    window.location.href="quiz1.html";
+  }, 2500); // 퀴즈 페이지로 이동
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
