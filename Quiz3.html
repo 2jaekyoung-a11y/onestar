@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>퀴즈 2 </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 모바일 최적화 -->
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #fdfdfd; /* 필요 시 배경 이미지 가능 */
+    color: black;
+  }
+  .quiz-container {
+    padding: 20px;
+  }
+  img {
+    max-width: 90%;
+    height: auto;
+    border: 5px solid white;
+    margin-bottom: 20px;
+  }
+  h1 {font-size: 1.5rem;}
+  h2 {font-size: 1.2rem;} 
+  }
+  p {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+  }
+  input {
+    padding: 10px;
+    font-size: 1rem;
+    width: 80%;
+    max-width: 300px;
+    margin-top: 10px;
+  }
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div class="quiz-container">
+  <!-- 여기 이미지 파일명을 본인 저장소의 이미지로 변경 -->
+  <h1> 두 번째 질문 </h1>
+  <h2> 이 그림에서 가르키는 사람은 누구일까요?</h2>
+  <img src="순정만화.jpg" alt="인물 퀴즈 이미지">  
+  <input type="text" id="answer" placeholder="정답">
+  <div>
+    <button onclick="checkAnswer()">제출</button>
+  </div>
+</div>
+
+<script>
+function checkAnswer() {
+  const userAnswer = document.getElementById('answer').value.trim();
+  // 정답은 원하는 인물 이름으로 변경 가능 (대소문자 모두 허용 예시)
+  const correctAnswer = "이한별";
+  
+  if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+    alert("정답입니다!");
+    window.location.href = "Final.html"; // 다음 퀴즈 페이지로 이동
+  } else {
+    alert("오답입니다. 다시 시도하세요.");
+  }
+}
+</script>
+</body>
+</html>
