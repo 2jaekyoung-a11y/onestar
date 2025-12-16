@@ -7,27 +7,87 @@
 <style>
   body {
     margin: 0;
-    background-color: #fdfdfd; /* 부드러운 흰색 배경 */
+    background-color: #fdfdfd;
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
-    text-align: center; /* 중앙 정렬 */
-    flex-direction: column;
+    text-align: center;
     padding: 20px;
+    color: #222;
   }
-  h1 {font-size: 1.5rem;}
-  h2 {font-size: 1.2rem;} 
-  h3 {font-size: 1.2rem;} 
-  p {
-    font-size: 1.0rem; /* 글씨 크기 - 숫자 조정 가능 (ex: 2rem, 1.2rem) */
-    margin: 12px 0;     /* 각 문장 사이 여백 */
-    line-height: 1.6;   /* 줄 간격 넉넉하게 */
+
+  .question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInPage 1.5s ease forwards;
+  }
+
+  h1, h2, p, input, button {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  /* 순차적 등장 애니메이션 */
+  .question-container h1 {
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.2s;
+  }
+  .question-container h2 {
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.6s;
+  }
+  .question-container p {
+    animation: fadeUp 0.8s ease forwards;
+  }
+  .question-container p:nth-of-type(1) { animation-delay: 1.0s; }
+  .question-container p:nth-of-type(2) { animation-delay: 2.0s; }
+  .question-container p:nth-of-type(3) { animation-delay: 3.0s; }
+  /* 필요한 만큼 nth-of-type 추가 가능 */
+
+  /* 입력창과 버튼의 강한 등장 효과 */
+  .question-container input {
+    font-size: 1rem;
+    padding: 8px;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 300px;
+    animation: popIn 0.7s ease forwards;
+    animation-delay: 3.5s;
+  }
+  .question-container button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background: #ff5252;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    animation: popIn 0.7s ease forwards;
+    animation-delay: 3.8s;
+  }
+
+  /* 애니메이션 키프레임 */
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes popIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 </style>
 </head>
 <body>
+
 <div class="question-container">
   <h1>첫 번째 질문 :</h1>
   <h2> 다음은 Sk바이오텍 블라인드에 적힌 글입니다.</h2>
@@ -47,13 +107,18 @@
   <button onclick="checkAnswer()">제출</button>
 </div>
 <script>
-function checkAnswer(){
-  if(document.getElementById('answer').value.trim() === "박용우"){
-    window.location.href="quiz2.html";
+function checkAnswer() {
+  const userAnswer = document.getElementById('answer').value.trim();
+  const correctAnswer = "이한별";
+  
+  if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+    alert("정답입니다!");
+    window.location.href = "quiz2.html";
   } else {
     alert("오답입니다. 다시 시도하세요.");
   }
 }
 </script>
+
 </body>
 </html>
