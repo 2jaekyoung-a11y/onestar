@@ -14,7 +14,7 @@
 
   /* 첫 화면 */
   .title-section {
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,14 +58,14 @@
 
   /* 마지막 섹션 */
   .final-section {
-    height: 60vh; /* 화면 전체보다 조금 작게 */
+    height: 40vh; /* 화면 전체보다 조금 작게 */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out, transform 1.5s ease-in-out;
     background-color: black;
   }
   .final-section.visible {
@@ -139,7 +139,7 @@
     }
 
     // 편지가 화면절반 아래로 내려가면 → 마지막 보기로 전환
-    if (rectLetter.bottom <= window.innerHeight / 2) {
+    if (rectLetter.bottom <= window.innerHeight - 200) {
       finalSection.classList.add('visible');
       letterSection.classList.remove('visible');
     }
